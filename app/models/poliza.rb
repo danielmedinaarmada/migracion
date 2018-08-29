@@ -1,0 +1,3 @@
+class Poliza < ApplicationRecord
+
+end

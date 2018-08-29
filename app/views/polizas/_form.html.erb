@@ -1,0 +1,49 @@
+<%= form_with(model: poliza, local: true) do |form| %>
+  <% if poliza.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(poliza.errors.count, "error") %> prohibited this poliza from being saved:</h2>
+
+      <ul>
+      <% poliza.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :poliza_a_migrar %>
+    <%= form.text_field :poliza_a_migrar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prima %>
+
+    <%= form.select(:prima) do %>
+      <% [['Prima Mensual: 2.01 Bs.', 49], ['Prima Mensual: 3.68 Bs.', 53], ['Prima Mensual: 4.91 Bs.', 54], ['Prima Mensual: 49.11 Bs.', 55]].each do |c| -%>
+        <%= content_tag(:option, c.first, value: c.last) %>
+      <% end %>
+  <% end %>
+
+
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_migracion %>
+    <%= form.date_select :fecha_migracion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :observacion %>
+    <%= form.text_field :observacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ip %>
+    <%= form.text_field :ip %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

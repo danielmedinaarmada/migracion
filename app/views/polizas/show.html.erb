@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Poliza a migrar:</strong>
+  <%= @poliza.poliza_a_migrar %>
+</p>
+
+<p>
+  <strong>Prima:</strong>
+  <%= @poliza.prima %>
+</p>
+
+<p>
+  <strong>Fecha migracion:</strong>
+  <%= @poliza.fecha_migracion %>
+</p>
+
+<p>
+  <strong>Observacion:</strong>
+  <%= @poliza.observacion %>
+</p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @poliza.ip %>
+</p>
+
+<%= link_to 'Edit', edit_poliza_path(@poliza) %> |
+<%= link_to 'Back', polizas_path %>
