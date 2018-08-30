@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Polizas</h1>
-<h2>IP: <%= @ip %></h2>
+<h2>IP: <%= @ip_address %> <%= @fecha.strftime("at %d-%m-%Y  %T") %></h2>
+<%= link_to 'New Poliza', new_poliza_path %>
+<br><br>
+
 <table>
   <thead>
     <tr>
@@ -30,6 +33,3 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Poliza', new_poliza_path %>

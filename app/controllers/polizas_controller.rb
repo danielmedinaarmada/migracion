@@ -1,5 +1,7 @@
 class PolizasController < ApplicationController
   before_action :set_poliza, only: [:show, :edit, :update, :destroy]
+  before_action :ip_address
+
 
   # GET /polizas
   # GET /polizas.json
@@ -60,6 +62,16 @@ class PolizasController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  protected
+ 
+ def ip_address
+    require 'socket' 
+    ip=Socket.ip_address_list.detect{|intf| intf.ipv4_private?} 
+    @ip_address =  request.env['REMOTE_ADDR']
+    @fecha =  Time.now
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
