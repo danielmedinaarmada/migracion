@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2018_09_07_193946) do
     t.datetime "updated_at", null: false
     t.boolean "conciliacion", default: false
     t.datetime "fecha_conciliacion"
+    t.boolean "anulada", default: false
+    t.datetime "fecha_anulada"
     t.boolean "migrada", default: false
     t.string "poliza_migrada"
     t.datetime "poliza_migrada_fecha"
