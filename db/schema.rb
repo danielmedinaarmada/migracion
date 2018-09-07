@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_29_214152) do
+ActiveRecord::Schema.define(version: 2018_09_07_193946) do
 
   create_table "polizas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "poliza_a_migrar"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2018_08_29_214152) do
     t.string "ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "conciliacion"
+    t.datetime "fecha_conciliacion"
   end
 
 end

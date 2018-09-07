@@ -13,6 +13,8 @@
       <th>Fecha migracion</th>
       <th>Observacion</th>
       <th>Ip</th>
+      <th>Conciliacion</th>
+      <th>Fecha de Conciliacion</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,6 +27,8 @@
         <td><%= poliza.fecha_migracion %></td>
         <td><%= poliza.observacion %></td>
         <td><%= poliza.ip %></td>
+        <td><%= poliza.conciliacion %></td>
+        <td><%= poliza.fecha_conciliacion %></td>
         <td><%= link_to 'Show', poliza %></td>
         <td><%= link_to 'Edit', edit_poliza_path(poliza) %></td>
         <td><%= link_to 'Destroy', poliza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
