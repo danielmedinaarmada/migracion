@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2018_09_07_193946) do
     t.string "poliza_migrada"
     t.datetime "poliza_migrada_fecha"
     t.string "observacion_migracion"
+    t.index ["poliza_a_migrar"], name: "index_polizas_on_poliza_a_migrar", unique: true
   end
 
 end
