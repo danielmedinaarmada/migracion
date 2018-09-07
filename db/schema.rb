@@ -20,8 +20,12 @@ ActiveRecord::Schema.define(version: 2018_09_07_193946) do
     t.string "ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "conciliacion"
+    t.boolean "conciliacion", default: false
     t.datetime "fecha_conciliacion"
+    t.boolean "migrada", default: false
+    t.string "poliza_migrada"
+    t.datetime "poliza_migrada_fecha"
+    t.string "observacion_migracion"
   end
 
 end

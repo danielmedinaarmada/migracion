@@ -81,6 +81,6 @@ class PolizasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def poliza_params
-      params.require(:poliza).permit(:poliza_a_migrar, :prima, :fecha_migracion, :observacion, :ip, :conciliacion, :fecha_conciliacion)
+      params.require(:poliza).permit(:poliza_a_migrar, :prima, :fecha_migracion, :observacion, :ip)
     end
   end
