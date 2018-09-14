@@ -33,7 +33,7 @@
         <td><%= poliza.poliza_a_migrar %></td>
         <td><%= poliza.prima %></td>
         <td><%= poliza.fecha_migracion %></td>
-        <td><%= poliza.observacion %></td>
+        <td><%= truncate(poliza.observacion, length:10) %></td>
         <td><%= poliza.ip %></td>
         <td><%= poliza.conciliacion %></td>
         <td><%= poliza.fecha_conciliacion %></td>
@@ -42,7 +42,7 @@
         <td><%= poliza.migrada %></td>
         <td><%= poliza.poliza_migrada %></td>
         <td><%= poliza.poliza_migrada_fecha %></td>
-        <td><%= poliza.observacion_migracion %></td>
+        <td><%= truncate(poliza.observacion_migracion, length:10) %></td>
         <td><%= link_to 'Show', poliza %></td>
         <td><%= link_to 'Edit', edit_poliza_path(poliza) %></td>
         <td><%= link_to 'Destroy', poliza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
