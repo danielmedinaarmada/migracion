@@ -20,7 +20,7 @@
     <%= form.label :prima %>
 
     <%= form.select(:prima) do %>
-      <% [['Prima Mensual: 4.91 Bs.', 54], ['Prima Mensual: 49.11 Bs.', 55]].each do |c| -%>
+      <% [['No acepta la migración', 00],['Prima Mensual: 4.91 Bs.', 54], ['Prima Mensual: 49.11 Bs.', 55]].each do |c| -%>
         <%= content_tag(:option, c.first, value: c.last) %>
       <% end %>
   <% end %>
