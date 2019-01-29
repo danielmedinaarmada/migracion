@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_24_192007) do
+ActiveRecord::Schema.define(version: 2019_01_29_205456) do
 
   create_table "polizas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "poliza_a_migrar"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 2018_09_24_192007) do
     t.string "observacion_migracion"
     t.datetime "fecha_nacimiento"
     t.boolean "excepcion", default: false
+    t.string "CI_Tomador"
+    t.string "CI_Asegurado"
     t.index ["poliza_a_migrar"], name: "index_polizas_on_poliza_a_migrar", unique: true
   end
 

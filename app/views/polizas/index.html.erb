@@ -8,7 +8,9 @@
 <table>
   <thead>
     <tr>
+      <th>Cedula Tomador</th>
       <th>Poliza a migrar</th>
+      <th>Cedula Asegurado</th>
       <th>Prima</th>
       <th>Fecha migracion</th>
       <th>Observacion</th>
@@ -23,7 +25,7 @@
       <th>Poliza Migrada</th>
       <th>Fecha de Nueva Poliza</th>
       <th>Observacion migracion</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -32,7 +34,9 @@
     <% @polizas.each do |poliza| %>
       <% cache poliza do %>	
       <tr>
+        <td><%= poliza.CI_Tomador %></td>
         <td><%= poliza.poliza_a_migrar %></td>
+        <td><%= poliza.CI_Asegurado %></td>
         <td><%= poliza.prima %></td>
         <td><%= poliza.fecha_migracion %></td>
         <td><%= truncate(poliza.observacion, length:10) %></td>
@@ -49,7 +53,7 @@
         <td><%= truncate(poliza.observacion_migracion, length:10) %></td>
         <td><%= link_to 'Show', poliza %></td>
         <td><%= link_to 'Edit', edit_poliza_path(poliza) %></td>
-        <td><%= link_to 'Destroy', poliza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
       </tr>
       <% end %>
     <% end %>
